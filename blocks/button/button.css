@@ -1,0 +1,13 @@
+@import url(./__edit/button__edit.css);
+@import url(./__plus/button__plus.css);
+.button {
+  background-color: transparent;
+  border: 1px solid white;
+  color: white;
+  display: block;
+  cursor: pointer;
+}
+
+.button:focus {
+  outline-color: greenyellow;
+}

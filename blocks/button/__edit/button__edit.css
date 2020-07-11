@@ -1,0 +1,15 @@
+.button__edit{
+    height: 18px;
+    width: 38px;
+    font-size: 12px;
+line-height: 15px;
+display: flex;
+align-items: center;
+text-align: center;
+margin-top: 28px;
+}
+@media (max-width: 980px){
+    .button__edit{
+        margin: 28px auto 0;
+    }
+}
