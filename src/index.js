@@ -22,9 +22,10 @@ const error = document.querySelector(".popup__error-message_profile")
 const form = document.forms.new
 const prevName = document.querySelector(".user-info__name");
 const prevJob = document.querySelector(".user-info__job");
+const isDev = process.env.NODE_ENV === 'development'  ? 'http://praktikum.tk/cohort9' : 'https://praktikum.tk/cohort9';
 
 const api = new Api({
-  baseUrl: 'https://praktikum.tk/cohort9',
+  baseUrl: isDev,
   headers: {
     authorization: 'bf18b594-27d5-4ddc-9c1f-d89cf1b43175',
     'Content-Type': 'application/json'
