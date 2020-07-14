@@ -1,9 +1,11 @@
 # project-11
+
 *** 
 [actual version](https://nikita-hub000.github.io/project-11/) is 1.1.0
 ***
 
 **Git**
+
 created repository on GitHub;
 
 issued readme.md - affixed version, there is a title, a link to the project, instructions on how to deploy the project;
@@ -50,3 +52,4 @@ images and fonts are optimized;
 9. Add the settings for downloading fonts to the rules section of the webpack.config.js file: { test: /.(eot|ttf|woff|woff2)$/, loader: 'file-loader?name=./vendor/[name].[ext]' }
 
 10. Break the code into modules.
+
