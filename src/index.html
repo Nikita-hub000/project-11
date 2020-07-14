@@ -5,12 +5,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Mesto</title>
-  <link rel="stylesheet" href="./pages/index.css">
+  <link rel="stylesheet" href="<%=htmlWebpackPlugin.files.css %>">
 </head>
 <body>
   <div class="root">
     <header class="header root__section">
-      <img src="./images/logo.svg" alt="mesto logo" class="logo">
+      <img src="<%=require('./images/logo.svg').default%>" alt="mesto logo" class="logo">
     </header>
     <div class="profile root__section">
       <div class="user-info">
@@ -25,19 +25,6 @@
     </div>
     <div class="places-list root__section">
 
-      <!-- Пример вёрстки карточки: -->
-    
-      <!--<div class="place-card"> Jaques Causteau Sailor, Researcher
-        <div class="place-card__image" style="background-image: url(https://pictures.s3.yandex.net/frontend-developer/cards-compressed/kamchatka.jpg)">
-          <button class="place-card__delete-icon"></button>
-        </div>
-        <div class="place-card__description">
-          <h3 class="place-card__name">Камчатка</h3>
-          <button class="place-card__like-icon"></button>
-        </div>
-      </div>
-
-       конец примера. -->
 
     </div>
     <div class="popup popup__edit_card">
@@ -68,18 +55,12 @@
     </div>
     <div class="popup popup_image">
       <div class="popup__content popup_image_container"> 
-      <img src=" ./images/close.svg" alt="" class="popup__close popup__close_image">
+      <img src="<%=require('./images/close.svg')%>" alt="" class="popup__close popup__close_image">
       <img class="popup_image_big" alt=""></img>
     </div>
     </div>
   </div>
-  <script src="js/initial.js"></script>
-  <script src="js/card.js"></script>
-  <script src="js/cardList.js"></script>
-  <script src="./js/FormValidator.js"></script>
-  <script src="./js/popup.js"></script>
-  <script src="./js/userInfo.js"></script>
-  <script src="./js/api.js"></script>
-  <script src="./js/index.js"></script>
+  <script src="<%= htmlWebpackPlugin.files.js %>"></script>
+  
 </body>
 </html>

@@ -1,5 +1,5 @@
 
-class userInfo {
+export class userInfo {
     constructor(form, userName, userData,avatar,  api) {
       this.form = form;
       this.userName = userName;

@@ -1,4 +1,6 @@
-class CardList {
+
+import {placesList, form} from '../index.js'
+ export class CardList {
     constructor(container,popupNews, newcards) {
         this.container = container;
         this.popupNews = popupNews;

@@ -1,3 +1,14 @@
+import "./pages/index.css";
+import {Card} from './js/card.js';
+import {CardList} from './js/cardList.js';
+import {Api} from './js/api.js';
+import {Popup} from './js/popup.js';
+import {initialCards} from './js/initial.js';
+import {userInfo} from './js/userInfo.js';
+import {FormValidator} from './js/FormValidator.js';
+
+
+
 const popupEditCard = document.querySelector(".popup__edit_card")
 const editName = document.querySelector(".edit-name")
 const editJob = document.querySelector(".edit-job")
@@ -11,9 +22,10 @@ const error = document.querySelector(".popup__error-message_profile")
 const form = document.forms.new
 const prevName = document.querySelector(".user-info__name");
 const prevJob = document.querySelector(".user-info__job");
+const isDev = process.env.NODE_ENV === 'development'  ? 'http://praktikum.tk/cohort9' : 'https://praktikum.tk/cohort9';
 
 const api = new Api({
-  baseUrl: 'https://praktikum.tk/cohort9',
+  baseUrl: isDev,
   headers: {
     authorization: 'bf18b594-27d5-4ddc-9c1f-d89cf1b43175',
     'Content-Type': 'application/json'
@@ -69,10 +81,11 @@ editCard.addEventListener('submit', (event) => {
     });
 })
 
-userInformation.userInfoLoad(this.editName, this.editJob);
+userInformation.userInfoLoad(editName, editJob);
 document.querySelector(".user-info__button-edit").addEventListener('click', () => {
   userInformation.setUserInfo();
-  userInformation.userInfoLoad(this.editName, this.editJob);
+  userInformation.userInfoLoad(editName, editJob);
   userInformation.updateUserAvatar.bind(userInformation);
 });
 
+export {placesList, form};
