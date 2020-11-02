@@ -1,5 +1,5 @@
 # project-11
-
+UPD: **the project is currently not working as it should due to the loss of the token to the Yandex.Practicum server**
 *** 
 [actual version](https://nikita-hub000.github.io/project-11/) is 1.1.0
 ***
